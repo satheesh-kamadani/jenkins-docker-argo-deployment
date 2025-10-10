@@ -7,9 +7,15 @@ Architecture Diagram
 ![Screenshot 2023-03-28 at 9 38 09 PM](https://user-images.githubusercontent.com/43399466/228301952-abc02ca2-9942-4a67-8293-f76647b6f9d8.png)
 
 ## Screenshots
-  . Jenkins pipeline showing all the stages successfull(screenshots/jenkins-pipeline.png)
-  . Application docker image pushed to docker hub(screenshots/dockerhub.png)
-  . Sonarqube static code analysis results for application(screenshots/sonarqube.png)
+
+- Jenkins pipeline showing all the stages successful  
+  ![Jenkins Pipeline](screenshots/jenkins-pipeline.png)
+
+- Application Docker image pushed to Docker Hub  
+  ![Docker Hub](screenshots/dockerhub.png)
+
+- SonarQube static code analysis results for application  
+  ![SonarQube Dashboard](screenshots/sonarqube.png)
 
 Here are the step-by-step details to set up an end-to-end Jenkins pipeline for a Java application using SonarQube, Argo CD, Helm, and Kubernetes:
 
