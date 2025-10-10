@@ -11,6 +11,8 @@ This project demonstrates a complete CI/CD pipeline integrating Jenkins, SonarQu
 - Jenkins pipeline showing all the stages successful: `screenshots/jenkins-pipeline.png`
 - Application Docker image pushed to Docker Hub: `screenshots/dockerhub.png`
 - SonarQube static code analysis results for application: `screenshots/sonarqube.png`
+- Argo CD user interface showing the application configured for deployment on Minikube: `screenshots/argocd_ui.png`
+- Spring Boot Java application running inside the Kubernetes cluster after deployment: `screenshots/spring-boot-java-app.png`
 
 Here are the step-by-step details to set up an end-to-end Jenkins pipeline for a Java application using SonarQube, Argo CD and Kubernetes:
 
