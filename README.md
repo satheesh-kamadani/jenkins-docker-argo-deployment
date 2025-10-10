@@ -12,7 +12,7 @@ Architecture Diagram
 - Application Docker image pushed to Docker Hub: `screenshots/dockerhub.png`
 - SonarQube static code analysis results for application: `screenshots/sonarqube.png`
 
-Here are the step-by-step details to set up an end-to-end Jenkins pipeline for a Java application using SonarQube, Argo CD, Helm, and Kubernetes:
+Here are the step-by-step details to set up an end-to-end Jenkins pipeline for a Java application using SonarQube, Argo CD and Kubernetes:
 
 Prerequisites:
 
