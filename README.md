@@ -49,16 +49,18 @@ This end-to-end Jenkins pipeline will automate the entire CI/CD process for a Ja
 ```bash
 git clone https://github.com/satheesh-kamadani/jenkins-docker-argo-deployment.git
 cd jenkins-docker-argo-deployment
+```
 
-2. Create an AWS EC2 Instance
-   Instance type: t2.large
-   Install the following tools:
+### 2. Create an AWS EC2 Instance
+       Instance type: t2.large
+       Install the following tools:
 
-3. Install Java
+### 3. Install Java
 ```bash
 sudo apt update
 sudo apt install -y openjdk-17-jre
 java -version
+```
 
 4. Install Jenkins
 ```bash
