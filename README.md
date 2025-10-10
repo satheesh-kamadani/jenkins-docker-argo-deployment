@@ -50,7 +50,6 @@ This end-to-end Jenkins pipeline will automate the entire CI/CD process for a Ja
 git clone https://github.com/satheesh-kamadani/jenkins-docker-argo-deployment.git
 cd jenkins-docker-argo-deployment
 ```
-
 ### 2. Create an AWS EC2 Instance
 Instance type: t2.large
 Install the following tools:
@@ -61,7 +60,6 @@ sudo apt update
 sudo apt install -y openjdk-17-jre
 java -version
 ```
-
 ### 4. Install Jenkins
 ```bash
 curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee \
@@ -74,7 +72,6 @@ sudo apt-get install -y jenkins
 sudo systemctl start jenkins
 sudo systemctl enable jenkins
 ```
-
 ### 5. Install Docker
 ```bash
 sudo apt install -y docker.io
@@ -83,7 +80,6 @@ sudo usermod -aG docker ubuntu
 sudo systemctl restart docker
 docker --version
 ```
-
 ### 6. Install Sonarqube
 ```bash
 sudo apt update
@@ -96,22 +92,23 @@ sudo chmod -R 775 /opt/sonarqube
 cd /opt/sonarqube/sonarqube-10.4.1.88267/bin/linux-x86-64
 ./sonar.sh start
 ```
-
 ### 7. Configure Jenkins Plugins
    Enable the following plugins:
    . Docker Pipeline
    . SonarQube Scanner
    . Blue Ocean
-8. Add Jenkins Global Credentials
+
+### 8. Add Jenkins Global Credentials
    . SonarQube Token
    . Docker Hub Credentials
    . GitHub Credentials
    . Argo CD Credentials
 
-9. Update Jenkinsfile
+### 9. Update Jenkinsfile
    . Set your SonarQube URL
    . Add Docker Hub credentials
    . Add GitHub credentials
-10 Run the Jenkins Pipeline
+
+### 10 Run the Jenkins Pipeline
    . Trigger the pipeline in Jenkins.
    . It will automatically build, test, push Docker images, update the deployment manifest, and Argo CD will deploy it to the Kubernetes cluster.
