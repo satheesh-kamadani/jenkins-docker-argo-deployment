@@ -52,8 +52,8 @@ cd jenkins-docker-argo-deployment
 ```
 
 ### 2. Create an AWS EC2 Instance
-       Instance type: t2.large
-       Install the following tools:
+Instance type: t2.large
+Install the following tools:
 
 ### 3. Install Java
 ```bash
@@ -62,7 +62,7 @@ sudo apt install -y openjdk-17-jre
 java -version
 ```
 
-4. Install Jenkins
+### 4. Install Jenkins
 ```bash
 curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee \
   /usr/share/keyrings/jenkins-keyring.asc > /dev/null
@@ -73,16 +73,18 @@ sudo apt-get update
 sudo apt-get install -y jenkins
 sudo systemctl start jenkins
 sudo systemctl enable jenkins
+```
 
-5. Install Docker
+### 5. Install Docker
 ```bash
 sudo apt install -y docker.io
 sudo usermod -aG docker jenkins
 sudo usermod -aG docker ubuntu
 sudo systemctl restart docker
 docker --version
+```
 
-6. Install Sonarqube
+### 6. Install Sonarqube
 ```bash
 sudo apt update
 sudo apt install -y unzip
@@ -93,8 +95,9 @@ sudo chown -R sonarqube:sonarqube /opt/sonarqube
 sudo chmod -R 775 /opt/sonarqube
 cd /opt/sonarqube/sonarqube-10.4.1.88267/bin/linux-x86-64
 ./sonar.sh start
+```
 
-7. Configure Jenkins Plugins
+### 7. Configure Jenkins Plugins
    Enable the following plugins:
    . Docker Pipeline
    . SonarQube Scanner
