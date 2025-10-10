@@ -53,7 +53,9 @@ pipeline {
         steps {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                 sh '''
-                    cd java-maven-sonar-argocd-helm-k8s
+                    rm -rf ${GIT_REPO_NAME}
+                    git clone https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME}.git
+                    cd ${GIT_REPO_NAME}
                     git config user.email "satheesh.xyz@gmail.com"
                     git config user.name "Satheesh Kamadani"
                     BUILD_NUMBER=${BUILD_NUMBER}
